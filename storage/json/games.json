@@ -630,6 +630,18 @@
     "title": "Subway Surfers"
   },
   {
+    "url": "/pages/games-frame?url=/pages/games/super-fowlst/",
+    "img": "/pages/images/fowlst.jpg",
+    "alt": "Super Fowlst",
+    "title": "Super Fowlst"
+  },
+  {
+    "url": "/pages/games-frame?url=/pages/games/super-fowlst2/",
+    "img": "/pages/images/fowlst2.png",
+    "alt": "Super Fowlst 2",
+    "title": "Super Fowlst 2"
+  },
+  {
     "url": "/pages/games-frame?url=/pages/games/sm63/",
     "img": "/pages/images/63flash.png",
     "alt": "Super Mario 63 (Flash)",
