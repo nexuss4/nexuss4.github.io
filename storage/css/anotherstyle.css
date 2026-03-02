@@ -5,6 +5,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -28,10 +29,12 @@ body {
   white-space: nowrap;
   flex-shrink: 0;
 }
+
 .logo-text img {
   height: 40px;
   margin-right: 10px;
 }
+
 .game-grid {
   display: flex;
   flex-wrap: wrap;
@@ -39,6 +42,7 @@ body {
   gap: 20px;
   padding: 20px 0;
 }
+
 .game-button {
   position: relative;
   border-radius: 10px;
@@ -50,34 +54,19 @@ body {
   cursor: pointer;
   overflow: hidden;
 }
+
 .game-button img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  transition: opacity 0.3s ease;
+  transition: transform 0.2s ease;
 }
+
 .game-button:hover img {
-  opacity: 0.3;
+  transform: scale(1.05);
 }
-.overlay-text {
-  position: absolute;
-  color: white;
-  font-family: "Comfortaa", sans-serif;
-  font-size: 18px;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: 1;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.game-button:hover .overlay-text {
-  opacity: 1;
-}
+
 .game-title {
   text-align: center;
   color: white;
@@ -85,15 +74,18 @@ body {
   font-size: 36px;
   margin: 20px 0 10px 0;
 }
+
 .games-title {
   text-align: center;
   color: white;
   font-size: 24px;
   margin-bottom: 20px;
 }
+
 a {
   text-decoration: none;
 }
+
 .search-bar-container {
   display: flex;
   justify-content: center;
@@ -101,6 +93,7 @@ a {
   margin: 20px auto;
   width: 100%;
 }
+
 .search-bar {
   width: 50%;
   max-width: 600px;
@@ -115,10 +108,37 @@ a {
   transition: all 0.3s ease;
   text-align: center;
 }
+
 .search-bar::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
+
 .search-bar:focus {
   border-color: rgba(255, 255, 255, 0.5);
   background: rgba(0, 0, 0, 0.5);
+}
+
+/* ========================= */
+/* Tooltip Styling */
+/* ========================= */
+
+.tooltip {
+  position: absolute;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+  z-index: 9999;
+  white-space: nowrap;
+  transform: translateY(5px);
+  font-family: "Comfortaa", sans-serif;
+}
+
+.tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
 }

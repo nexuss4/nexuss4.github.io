@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,15 +36,16 @@
 <div class="game-grid" id="gameGrid">
     <div class="game-button">
         <a href="" target="_blank">
-            <img src="/storage/images/topis.png" alt="toprak">
-            <div class="overlay-text">toprak</div>
+            <img src="/storage/images/supporters/topis.png" alt="toprak">
         </a>
     </div>
 </div>
 
+<!-- Tooltip element -->
+<div class="tooltip"></div>
+
 <script>
     function checkGridAlignment() {
-        const gameGrid = document.getElementById('gameGrid');
         const buttons = document.querySelectorAll('.game-button');
         const pageWidth = window.innerWidth;
 
@@ -60,28 +60,49 @@
             }
         });
     }
+
     window.addEventListener('resize', checkGridAlignment);
     window.addEventListener('load', checkGridAlignment);
 </script>
-<script>
-    function filterGames() {
-        const searchInput = document.getElementById('gameSearch').value.toLowerCase();
-        const games = document.querySelectorAll('.game-button');
 
-        games.forEach(game => {
-            const gameTitle = game.querySelector('.overlay-text').textContent.toLowerCase();
-            if (gameTitle.includes(searchInput)) {
-                game.style.display = 'block';
-            } else {
-                game.style.display = 'none';
+<!-- Tooltip Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const tooltip = document.querySelector(".tooltip");
+        if (!tooltip) return;
+
+        document.body.addEventListener("mouseenter", (e) => {
+            if (e.target && e.target.tagName === "IMG" && e.target.alt) {
+                tooltip.textContent = e.target.alt;
+                tooltip.classList.add("show");
+
+                const padding = 15;
+                const maxX = window.innerWidth - tooltip.offsetWidth - padding;
+                tooltip.style.left = Math.min(e.pageX + padding, maxX) + "px";
+                tooltip.style.top = (e.pageY - 20) + "px";
+            }
+        }, true);
+
+        document.body.addEventListener("mousemove", (e) => {
+            if (tooltip.classList.contains("show")) {
+                const padding = 15;
+                const maxX = window.innerWidth - tooltip.offsetWidth - padding;
+                tooltip.style.left = Math.min(e.pageX + padding, maxX) + "px";
+                tooltip.style.top = (e.pageY - 20) + "px";
             }
         });
-    }
-</script>
 
+        document.body.addEventListener("mouseleave", (e) => {
+            if (e.target && e.target.tagName === "IMG") {
+                tooltip.classList.remove("show");
+            }
+        }, true);
+    });
+</script>
 
 <script type="text/javascript" src="/storage/js/notify.js"></script>
 <script type="text/javascript" src="/storage/js/background.js"></script>
 <script type="text/javascript" src="/storage/js/cheese-algorithm.js"></script>
+
 </body>
 </html>

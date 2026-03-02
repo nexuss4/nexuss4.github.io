@@ -18,16 +18,18 @@
   <script src="/storage/js/app.js"></script>
   <div id="particles-js"></div>
   <script src="/storage/js/particles-toggle.js" defer></script>
+
   <div class="navbar">
     <div class="left-side">
-      <a href="/">
-      </a>
+      <a href="/"></a>
     </div>
     <div class="right-side">
       <script type="text/javascript" src="/storage/js/nav.js"></script>
     </div>
   </div>
+
   <div class="game-title">Apps</div>
+
   <div class="search-bar-container">
     <input
       type="text"
@@ -38,7 +40,11 @@
     />
     <button id="random-button">Let us pick</button>
   </div>
+
   <div class="game-grid" id="gameGrid"></div>
+
+  <!-- Tooltip element (required for the tooltip script) -->
+  <div class="tooltip"></div>
 
   <script>
     const CACHE_KEY = "apps-cache";
@@ -46,7 +52,6 @@
     const JSON_PATH = "/storage/json/apps.json";
 
     async function loadApps() {
-      const gameGrid = document.getElementById("gameGrid");
       const cached = localStorage.getItem(CACHE_KEY);
 
       if (cached) {
@@ -76,17 +81,18 @@
     function renderApps(apps) {
       const gameGrid = document.getElementById("gameGrid");
       gameGrid.innerHTML = "";
+
       for (const game of apps) {
         const div = document.createElement("div");
         div.className = "game-button";
         div.innerHTML = `
           <a href="${game.url}">
             <img src="${game.img}" alt="${game.alt || game.title}" onerror="this.onerror=null;this.src='/storage/images/404.png';" />
-            <div class="overlay-text">${game.title}</div>
           </a>
         `;
         gameGrid.appendChild(div);
       }
+
       sortGameButtons();
       checkGridAlignment();
     }
@@ -94,8 +100,10 @@
     function filterApps() {
       const searchInput = document.getElementById("gameSearch").value.toLowerCase();
       const apps = document.querySelectorAll(".game-button");
+
       apps.forEach((game) => {
-        const title = game.querySelector(".overlay-text").textContent.toLowerCase();
+        const img = game.querySelector("img");
+        const title = (img && img.alt ? img.alt : "").toLowerCase();
         game.style.display = title.includes(searchInput) ? "block" : "none";
       });
     }
@@ -125,6 +133,41 @@
     });
   </script>
 
+  <!-- Tooltip Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tooltip = document.querySelector(".tooltip");
+      if (!tooltip) return;
+
+      document.body.addEventListener("mouseenter", (e) => {
+        if (e.target && e.target.tagName === "IMG" && e.target.alt) {
+          tooltip.textContent = e.target.alt;
+          tooltip.classList.add("show");
+
+          const padding = 15;
+          const maxX = window.innerWidth - tooltip.offsetWidth - padding;
+          tooltip.style.left = Math.min(e.pageX + padding, maxX) + "px";
+          tooltip.style.top = (e.pageY - 20) + "px";
+        }
+      }, true);
+
+      document.body.addEventListener("mousemove", (e) => {
+        if (tooltip.classList.contains("show")) {
+          const padding = 15;
+          const maxX = window.innerWidth - tooltip.offsetWidth - padding;
+          tooltip.style.left = Math.min(e.pageX + padding, maxX) + "px";
+          tooltip.style.top = (e.pageY - 20) + "px";
+        }
+      });
+
+      document.body.addEventListener("mouseleave", (e) => {
+        if (e.target && e.target.tagName === "IMG") {
+          tooltip.classList.remove("show");
+        }
+      }, true);
+    });
+  </script>
+
   <script type="text/javascript" src="/storage/js/settings.js"></script>
   <script type="text/javascript" src="/storage/js/background.js"></script>
   <script type="text/javascript" src="/storage/js/resort.js"></script>
@@ -134,6 +177,7 @@
   <script src="/static/register-sw.js" defer></script>
   <script src="/static/search.js" defer></script>
   <script src="/static/index.js" defer></script>
+
   <script>
     async function regsw() {
       await navigator.serviceWorker.register("/static/uv-sw.js", {
