@@ -414,25 +414,25 @@
     "title": "Let's Surf"
   },
  {
-    "url": "/pages/games-frame?url=/pages/games/mario-bros-ds/",
+    "url": "/pages/games-frame?url=/pages/roms/newsmb/",
     "img": "/pages/images/new-smb.png",
     "alt": "New Super Mario Bros.",
     "title": "New Super Mario Bros."
   },
  {
-    "url": "/pages/games-frame?url=/pages/games/superstarsaga/",
+    "url": "/pages/games-frame?url=/pages/roms/superstarsaga/",
     "img": "/pages/images/superstarsaga.webp",
     "alt": "Mario & Luigi: Superstar Saga",
     "title": "Mario & Luigi: Superstar Saga"
   },
  {
-    "url": "/pages/games-frame?url=/pages/games/mario-party/",
+    "url": "/pages/games-frame?url=/pages/roms/mario-party/",
     "img": "/pages/images/marioparty.png",
     "alt": "Mario Party DS",
     "title": "Mario Party DS"
   },
  {
-    "url": "/pages/games-frame?url=/pages/games/mkds/",
+    "url": "/pages/games-frame?url=/pages/roms/mkds/",
     "img": "/pages/images/mkds.png",
     "alt": "Mario Kart DS",
     "title": "Mario Kart DS"
@@ -496,6 +496,12 @@
     "img": "/pages/images/polytrack.jpg",
     "alt": "Poly Track",
     "title": "Poly Track"
+  },
+  {
+    "url": "/pages/games-frame?url=/pages/roms/pm64/",
+    "img": "/pages/images/pm64.png",
+    "alt": "Paper Mario 64",
+    "title": "Paper Mario 64"
   },
   {
     "url": "/pages/games-frame?url=/pages/games/raftwars/",
@@ -624,6 +630,12 @@
     "title": "Stickman Hook"
   },
   {
+    "url": "/pages/games-frame?url=/pages/roms/supersmashbros/",
+    "img": "/pages/images/supersmashbros.png",
+    "alt": "Super Smash Bros.",
+    "title": "Super Smash Bros."
+  },
+  {
     "url": "/pages/games-frame?url=/pages/games/subway-surfers/",
     "img": "/pages/images/subway.jfif",
     "alt": "Subway Surfers",
@@ -642,6 +654,18 @@
     "title": "Super Fowlst 2"
   },
   {
+    "url": "/pages/games-frame?url=/pages/roms/supermariobros/",
+    "img": "/pages/images/smb.png",
+    "alt": "Super Mario Bros.",
+    "title": "Super Mario Bros."
+  },
+  {
+    "url": "/pages/games-frame?url=/pages/roms/supermariobros3/",
+    "img": "/pages/images/smb3.png",
+    "alt": "Super Mario Bros.",
+    "title": "Super Mario Bros. 3"
+  },
+  {
     "url": "/pages/games-frame?url=/pages/games/sm63/",
     "img": "/pages/images/63flash.png",
     "alt": "Super Mario 63 (Flash)",
@@ -654,7 +678,7 @@
     "title": "Super Mario 63 (Redux)"
   },
   {
-    "url": "/pages/games-frame?url=/pages/games/sm64/",
+    "url": "/pages/games-frame?url=/pages/roms/sm64/",
     "img": "/pages/images/sm64.png",
     "alt": "Super Mario 64",
     "title": "Super Mario 64"
@@ -664,6 +688,18 @@
     "img": "/pages/images/smc.png",
     "alt": "Super Mario Construct",
     "title": "Super Mario Construct"
+  },
+  {
+    "url": "/pages/games-frame?url=/pages/roms/supermariokart/",
+    "img": "/pages/images/smk.webp",
+    "alt": "Super Mario Kart",
+    "title": "Super Mario Kart"
+  },
+  {
+    "url": "/pages/games-frame?url=/pages/roms/supermarioworld/",
+    "img": "/pages/images/supermarioworld.png",
+    "alt": "Super Mario World",
+    "title": "Super Mario World"
   },
   {
     "url": "/pages/games-frame?url=/pages/games/swingo/",
