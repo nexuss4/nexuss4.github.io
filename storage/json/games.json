@@ -17,6 +17,12 @@
     "alt": "Angry Birds",
     "title": "Angry Birds"
   },
+    {
+    "url": "/pages/games-frame?url=/pages/games/angrybirdsepic/",
+    "img": "/pages/images/angrybirdsepic.webp",
+    "alt": "Angry Birds Epic",
+    "title": "Angry Birds Epic"
+  },
   {
     "url": "/pages/games-frame?url=/pages/games/animator-vs-animation/",
     "img": "/pages/images/avsa.png",
@@ -288,10 +294,10 @@
     "title": "Duck Life 7: Battle"
   },
   {
-    "url": "/static/embed?p=https://uploads.ungrounded.net/alternate/1490000/1490439_alternate_103815_r1.zip/",
-    "img": "/pages/images/duck-adventure.png",
-    "alt": "Duck Life Adventure",
-    "title": "Duck Life Adventure"
+    "url": "/pages/games-frame?url=/pages/games/ducklife8/",
+    "img": "/pages/images/ducklife8.png",
+    "alt": "Duck Life 8: Adventure",
+    "title": "Duck Life 8: Adventure"
   },
   {
     "url": "/pages/games-frame?url=/pages/games/dud/",
@@ -366,10 +372,16 @@
     "title": "Getaway Shootout"
   },
   {
+    "url": "/pages/games-frame?url=/pages/games/gorillatag/",
+    "img": "/pages/images/gorillatag.png",
+    "alt": "Gorilla Tag",
+    "title": "Gorilla Tag"
+  },
+  {
     "url": "/pages/games-frame?url=/pages/games/hollowknight/",
     "img": "/pages/images/hollowknight.jpg",
-    "alt": "Hollow Knight",
-    "title": "Hollow Knight"
+    "alt": "Hollow Knight: Silksong",
+    "title": "Hollow Knight: Silksong"
   },
   {
     "url": "/pages/games-frame?url=/pages/games/incredibox/",
@@ -594,10 +606,10 @@
     "title": "Smash Karts"
   },
   {
-    "url": "/static/embed?p=https://games.crazygames.com/en_US/escape-road-2/index.html",
-    "img": "/pages/images/smashyroad.png",
-    "alt": "Smashy Road",
-    "title": "Smashy Road"
+    "url": "/pages/games-frame?url=/pages/games/escroadcity2/",
+    "img": "/pages/images/escroad2.png",
+    "alt": "Escape Road City 2",
+    "title": "Escape Road City 2"
   },
   {
     "url": "/pages/games-frame?url=/pages/games/snowrider/",
