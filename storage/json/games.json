@@ -132,6 +132,12 @@
     "title": "Breaking The Bank"
   },
   {
+    "url": "/pages/games-frame?url=/pages/games/burrito/",
+    "img": "/pages/images/burrito.webp",
+    "alt": "Burrito Bison",
+    "title": "Burrito Bison"
+  },
+  {
     "url": "/pages/games-frame?url=/pages/games/cell-machine/",
     "img": "/pages/images/cell-machine.png",
     "alt": "Cell Machine",
